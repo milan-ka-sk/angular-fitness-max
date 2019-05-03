@@ -1,10 +1,15 @@
 <section>
-    <form>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="mk-form">
         <mat-form-field>
-            <input matInput placeholder="Your email" type="email">
+            <input matInput placeholder="Your email" type="email" ngModel name="email" email required #emailInput="ngModel">
+            <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
+            <mat-error *ngIf="!emailInput.hasError('required')">E-mail is invalid.</mat-error>
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Your password" type="password">
+        <mat-form-field hintLabel="Should be at least 6 characters long.">
+            <input matInput placeholder="Your password" type="password" ngModel name="password" required minlength="6" #pwInput="ngModel">
+            <mat-hint align="end">{{pwInput.value?.length}} / 6</mat-hint>
+            <mat-error>Has to be at least 6 characters long.</mat-error>
         </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" class="mk-btn-bottom">Submit</button>
     </form>
 </section>
