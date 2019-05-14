@@ -1,0 +1,39 @@
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+    height: 100%;
+}
+
+mat-sidenav {
+    width: 250px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover,
+a:active {
+    color: #ddd;
+}
+
+.mk-navbar-links {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.mk-list-menu-horiz {
+    list-style-type: none;
+}
+
+.mk-list-menu-horiz li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.mk-nav-caption {
+    display: inline-block;
+    margin-left: 6px;
+}

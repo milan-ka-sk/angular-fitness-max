@@ -20,6 +20,6 @@
         </mat-form-field> -->
         <mat-checkbox ngModel name="agree" required>Agree to terms.</mat-checkbox>
 
-        <button type="submit" mat-raised-button color="primary" class="mk-btn-bottom">Submit</button>
+        <button type="submit" mat-raised-button color="primary" class="mk-btn-bottom" [disabled]="f.invalid">Submit</button>
     </form>
 </section>
