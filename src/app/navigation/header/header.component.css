@@ -1,0 +1,24 @@
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover,
+a:active {
+    color: #ddd;
+}
+
+.mk-navbar-links {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.mk-list-menu-horiz {
+    list-style-type: none;
+}
+
+.mk-list-menu-horiz li {
+    display: inline-block;
+    margin-left: 10px;
+}

@@ -1,48 +1,9 @@
 <mat-sidenav-container>
     <mat-sidenav opened="true" #sidenav role="navigation">
-        <mat-nav-list>
-            <mat-list-item (click)="sidenav.close()">
-                <a routerLink="/signup">
-                    <mat-icon>face</mat-icon>
-                    <span class="mk-nav-caption">Signup</span></a>
-            </mat-list-item>
-            <mat-list-item (click)="sidenav.close()">
-                <a routerLink="/login">
-                    <mat-icon>input</mat-icon>
-                    <span class="mk-nav-caption">Login</span>
-                </a>
-            </mat-list-item>
-            <mat-list-item (click)="sidenav.close()">
-                <a routerLink="/training">
-                    <mat-icon>fitness_center</mat-icon>
-                    <span class="mk-nav-caption">Training</span>
-                </a>
-            </mat-list-item>
-            <mat-list-item (click)="sidenav.close()">
-                <button mat-icon-button>
-                  <mat-icon>eject</mat-icon>
-                  <span class="mk-nav-caption">Logout</span>
-              </button>
-            </mat-list-item>
-        </mat-nav-list>
+        <app-sidenav-list (clickNavItem)="sidenav.close()"></app-sidenav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar color="primary">
-            <div>
-                <button mat-icon-button (click)="sidenav.toggle()">
-                  <mat-icon>menu</mat-icon>
-                </button>
-            </div>
-            <div><a routerLink="/">LOGO</a></div>
-            <div class="mk-navbar-links">
-                <ul class="mk-list-menu-horiz">
-                    <li><a routerLink="/signup">Signup</a></li>
-                    <li><a routerLink="/login">Login</a></li>
-                    <li><a routerLink="/training">Training</a></li>
-                    <li><a>Logout</a></li>
-                </ul>
-            </div>
-        </mat-toolbar>
+        <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
         <main>
             <router-outlet></router-outlet>
         </main>

@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover,
+a:active {
+    color: #ddd;
+}
+
+.mk-nav-caption {
+    display: inline-block;
+    margin-left: 6px;
+}
