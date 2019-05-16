@@ -17,6 +17,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { AuthService } from './auth/auth.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     MaterialModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 
