@@ -16,10 +16,10 @@
             <span class="mk-nav-caption">Training</span>
         </a>
     </mat-list-item>
-    <mat-list-item (click)="onClose()" *ngIf="isAuth">
+    <mat-list-item (click)="onLogout()" *ngIf="isAuth">
         <button mat-icon-button>
-        <mat-icon>eject</mat-icon>
-        <span class="mk-nav-caption">Logout</span>
-    </button>
+          <mat-icon>eject</mat-icon>
+          <span class="mk-nav-caption">Logout</span>
+        </button>
     </mat-list-item>
 </mat-nav-list>
