@@ -5,11 +5,8 @@
             <mat-form-field>
                 <mat-label>Excercises</mat-label>
                 <mat-select>
-                    <mat-option value="crunches">
-                        Crunches
-                    </mat-option>
-                    <mat-option value="touch-toes">
-                        Touch Toes
+                    <mat-option [value]="excercise.id" *ngFor="let excercise of excercises">
+                        {{excercise.name}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
